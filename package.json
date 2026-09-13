@@ -1,0 +1,69 @@
+{
+  "name": "dsh-deep-contrast",
+  "version": "0.1.0",
+  "description": "Deep Contrast — a restrained high-contrast light/dark theme for DeepSeek Harness",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "contrast",
+    "light-theme",
+    "dark-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temidayoxyz/deep-contrast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/temidayoxyz/deep-contrast/issues"
+  },
+  "homepage": "https://github.com/temidayoxyz/deep-contrast#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepare": "tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "tsdown": "^0.16.8",
+    "typescript": "^5.8.0"
+  }
+}

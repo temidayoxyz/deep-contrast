@@ -1,0 +1,7 @@
+# Deep Contrast bundle layer: mounts the package on the Loader. The browser
+# half (lib/client) is discovered and served by the client-modules scan from
+# the package's dsh.client declaration; this host row is what puts the package
+# on the Loader in the first place.
+- insert:
+    - id: deep-contrast
+      name: dsh-deep-contrast
